@@ -19,6 +19,7 @@ jobs:
           repositoryNameWithOwner: ${{ github.repository }}
           analyzeDependencies: true
           minimumLanguageBytes: 0
+
   run-cbom-action:
     name: ${{ fromJson(matrix.repository).nameWithOwner }} - ${{ fromJson(matrix.repository).language }}
     runs-on: ubuntu-latest
@@ -33,6 +34,7 @@ jobs:
         with:
           repositoryNameWithOwner: ${{ fromJson(matrix.repository).nameWithOwner }}
           language: ${{ fromJson(matrix.repository).language }}
+
   add-workflow-summary:
     name: CBOM results
     runs-on: ubuntu-latest
