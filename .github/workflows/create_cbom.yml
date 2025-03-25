@@ -34,9 +34,6 @@ jobs:
         with:
           repositoryNameWithOwner: ${{ fromJson(matrix.repository).nameWithOwner }}
           language: ${{ fromJson(matrix.repository).language }}
-      - uses: actions/download-artifact@v4
-        with:
-          name: cbom-summary
 
   add-workflow-summary:
     name: CBOM results
